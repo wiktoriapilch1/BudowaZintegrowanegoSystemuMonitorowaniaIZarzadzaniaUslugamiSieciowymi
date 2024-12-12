@@ -1,0 +1,10 @@
+#!/sbin/openrc-run
+
+description="Custom Exporter for Prometheus"
+
+command="/bin/sh"
+command_args="-c 'source /path/to/venv/bin/activate && exec python /root/custom_exporter.py'"
+
+command_background="yes"
+
+pidfile="/run/custom_exporter.pid"
