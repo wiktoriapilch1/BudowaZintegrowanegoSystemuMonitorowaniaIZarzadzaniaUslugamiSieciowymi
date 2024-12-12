@@ -1,0 +1,14 @@
+#!/sbin/openrc-run
+
+description="Register Server for Prometheus"
+
+command="/bin/sh"
+command_args="-c 'source /path/to/venv/bin/activate && exec python /root/register_server.py'"
+
+command_background="yes"
+
+pidfile="/run/register_server.pid"
+
+depend() {
+    need net
+}
