@@ -1,0 +1,5 @@
+#!/sbin/openrc-run
+description="Register VM with Prometheus server"
+
+command="/usr/local/bin/register_vm.sh"
+command_background="no"
